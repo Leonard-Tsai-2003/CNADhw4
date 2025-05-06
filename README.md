@@ -18,7 +18,7 @@ This repository contains a Dockerized Flask web application for the HW4 assignme
 Clone the repository to your local machine:
 ```bash
 git clone https://github.com/Leonard-Tsai-2003/CNADhw4.git
-cd cnadhw4
+cd CNADhw4
 ```
 
 ### 2. Build the Docker Image
@@ -49,7 +49,7 @@ To test the image directly from Docker Hub:
 docker pull leonardtsai92/2025cloud:latest
 docker run -p 5001:5001 leonardtsai92/2025cloud:latest
 ```
-Visit `http://localhost:5000` to verify.
+Visit `http://localhost:5001` to verify.
 
 ## License
 MIT License

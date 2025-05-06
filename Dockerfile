@@ -10,6 +10,9 @@ COPY requirements.txt .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Intentionally break the build by running a non-existent command
+RUN nonexistent_command_to_break_build
+
 # Copy the application code into the container
 COPY . .
 

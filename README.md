@@ -53,3 +53,5 @@ Visit `http://localhost:5001` to verify.
 
 ## License
 MIT License
+
+![Workflow](workflow.png)

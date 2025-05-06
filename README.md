@@ -14,8 +14,42 @@ This repository contains a Dockerized Flask web application for the HW4 assignme
 - A Docker Hub account.
 - A GitHub account.
 
-## Setup Instructions
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/hw4-docker.git
-   cd hw4-docker
+### 1. Clone the Repository
+Clone the repository to your local machine:
+```bash
+git clone https://github.com/Leonard-Tsai-2003/CNADhw4.git
+cd cnadhw4
+```
+
+### 2. Build the Docker Image
+Build the Docker image using the provided Dockerfile:
+```bash
+docker build -t cnadhw4 .
+```
+
+### 3. Run the Docker Container
+Run the container and map port 5001 to access the application:
+```bash
+docker run -p 5001:5001 cnadhw4
+```
+Open a browser and visit `http://localhost:5001` to see the application running (displays "Hello, Docker!").
+
+## GitHub Actions Workflow
+- The workflow triggers on pushes to the `main` branch.
+- It builds the Docker image and pushes it to Docker Hub as `leonardtsai92/cnadhw4:latest`.
+- Secrets `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` are used for Docker Hub authentication.
+
+## Docker Hub
+The Docker image is available at:
+- [leonardtsai92/2025cloud](https://hub.docker.com/r/leonardtsai92/2025cloud)
+
+## Testing the Docker Hub Image
+To test the image directly from Docker Hub:
+```bash
+docker pull leonardtsai92/2025cloud:latest
+docker run -p 5001:5001 leonardtsai92/2025cloud:latest
+```
+Visit `http://localhost:5000` to verify.
+
+## License
+MIT License

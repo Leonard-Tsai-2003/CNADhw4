@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: leonardtsai92/cnadhw4:latest
+          tags: leonardtsai92/2025cloud:latest
